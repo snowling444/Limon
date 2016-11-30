@@ -1,0 +1,13 @@
+.btn:focus,.btn:hover,.btn:visited{outline: none;color: #fff;}
+.my-wrap{display: flex;flex-direction: column;height: 100vh;}
+.nav-header{display: flex;justify-content: space-between;height: 80px;background-color: #EF5350;padding: 0 6px;align-items: center;flex-shrink: 0;}
+.nav-header h3{margin: 0;color: #fff;font-weight: bold;}
+.nav-header button{height: 36px;color: #fff;background-color: #E57373;border: none;}
+.btn:hover {background-color: rgba(0, 0, 0, 0.2);}
+.main{flex-grow: 1;overflow-y: scroll;background-color: #FFEBEE;display: flex;}
+.nav-footer{height: 80px;background-color: #ad1c19;flex-shrink: 0;display: flex;justify-content: space-around;align-items: center;}
+.nav-footer a{color: #fff;font-size: 18px;text-decoration: none;text-align: center;border-right: 1px solid #ccc;flex-grow: 1;}
+.nav-footer a:last-child{border: none;}
+.home-wrap{flex-grow: 1;background-image: url(./images/home-bg.jpg);background-size: cover;background-position: 50% 50%;display: flex;}
+.home-cover{background-color: rgba(0,0,0,0.5);flex-grow: 1;display: flex;align-items: center;}
+.home-item{text-align: center;margin: 0 auto;color: #fff;}
