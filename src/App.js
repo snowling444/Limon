@@ -1,5 +1,7 @@
 import React from 'react';
 
+import getMuiTheme from 'material-ui/styles/getMuiTheme';//2
+
 import NavHeader from './component/NavHeader';
 import NavFooter from './component/NavFooter';
 
@@ -7,6 +9,9 @@ class App extends React.Component {
   constructor(){
     super();
     this.state={title:'Home'}
+  }
+  getChildContext(){//2
+    return{muiTheme:getMuiTheme()}
   }
   componentWillMount(){
     this.setTitle();
@@ -31,5 +36,8 @@ class App extends React.Component {
       </div>
     )
   }
+}
+App.childContextTypes={
+  muiTheme:React.PropTypes.object
 }
 export default App;
