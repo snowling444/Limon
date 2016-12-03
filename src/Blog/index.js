@@ -1,19 +1,25 @@
 import React from 'react';
+import axios from 'axios';
 
 import BlogCard from '../component/BlogCard';
+import Loading from '../component/Loading';
 
-let data=[
-  {index:1,title:'Today',desc:'不开心'},
-  {index:2,title:'Today',desc:'不开心'},
-  {index:3,title:'Today',desc:'不开心'},
-  {index:4,title:'Today',desc:'不开心'}
-]
 class Blog extends React.Component {
+  constructor(){
+    super();
+    this.state={
+      data:[],
+      wait:true
+    }
+  }
+  componentWillMount(){
+    axios.get('https://raw.githubusercontent.com/snowling444/Limon/master/data/blogcard.json?a='+Math.random())
+     .then( res => this.setState({data:res.data,wait:false}))
+  }
   render () {
-    let cards=data.map((item,i) => <BlogCard {...item} key={i} />)
     return(
       <div className='blog-wrap'>
-        {cards}
+        {this.state.wait ? <Loading /> : this.state.data.map((item,i) => <BlogCard {...item} key={i} />)}
       </div>
     )
   }
