@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import Loading from '../component/Loading';
 var marked = require('marked');
 console.log(marked('I am using __markdown__.'));
 
@@ -16,10 +17,10 @@ class Item extends React.Component {
      .then( res => this.setState({data:res.data}) )
   }
   render () {
-    let content = this.state.data.length==0 ? 'Wait' : marked(this.state.data);
     return(
-      <div className='item-arl'>
-        <div dangerouslySetInnerHTML={{__html:content}} />
+      <div className='item-wrap'>
+        {this.state.data.length==0 ? <Loading /> :
+         <div dangerouslySetInnerHTML={{__html:marked(this.state.data)}} />}
       </div>
     )
   }
