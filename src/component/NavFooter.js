@@ -5,16 +5,16 @@ class NavFooter extends React.Component {
   render () {
     return(
       <div className='nav-footer'>
-        <Link to='/' activeStyle={{color: '#00E676'}} onlyActiveOnIndex={true}>
+        <Link to='/' activeStyle={{color: '#26C6DA'}} onlyActiveOnIndex={true}>
           <span className="glyphicon glyphicon-home" aria-hidden="true"></span><br />Home
         </Link>
-        <Link to='/blog' activeStyle={{color: '#00E676'}}>
+        <Link to='/blog' activeStyle={{color: '#26C6DA'}}>
           <span className="glyphicon glyphicon-time" aria-hidden="true"></span><br />Blog
         </Link>
-        <Link to='/work' activeStyle={{color: '#00E676'}}>
+        <Link to='/work' activeStyle={{color: '#26C6DA'}}>
           <span className="glyphicon glyphicon-edit" aria-hidden="true"></span><br />Work
         </Link>
-        <Link to='/about' activeStyle={{color: '#00E676'}}>
+        <Link to='/about' activeStyle={{color: '#26C6DA'}}>
           <span className="glyphicon glyphicon-leaf" aria-hidden="true"></span><br />About
         </Link>
       </div>
