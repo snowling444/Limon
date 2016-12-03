@@ -9,7 +9,7 @@ class BlogCard extends React.Component {
         <div className='blog-content clearfix'>
           <h3>{this.props.title}</h3>
           <p>{this.props.desc}</p>
-          <RaisedButton label="More" primary={true} />
+          <RaisedButton label="More" primary={true} href={`#/item/${this.props.url}`}/>
         </div>
       </div>
     )
