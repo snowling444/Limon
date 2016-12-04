@@ -1,5 +1,8 @@
 import React from 'react';
 import axios from 'axios';
+
+import hljs from 'highlight';
+
 import Loading from '../component/Loading';
 var marked = require('marked');
 console.log(marked('I am using __markdown__.'));
@@ -17,10 +20,15 @@ class Item extends React.Component {
      .then( res => this.setState({data:res.data}) )
   }
   render () {
+    marked.setOptions({
+      highlight: function (code) {
+        return hljs.highlightAuto(code).value;
+      }
+    });
     return(
       <div className='item-wrap'>
         {this.state.data.length==0 ? <Loading /> :
-         <div dangerouslySetInnerHTML={{__html:marked(this.state.data)}} />}
+         <div className='post-content' dangerouslySetInnerHTML={{__html:marked(this.state.data)}} />}
       </div>
     )
   }

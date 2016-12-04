@@ -44,7 +44,7 @@ class About extends React.Component {
           <h2>Search Git Info</h2>
           <form className='about-form' ref='form' onSubmit={this.handleSubmit.bind(this)}>
             <TextField hintText="Hint Text" ref='gitname' hintText='github username' underlineFocusStyle={{borderColor:'#EF5350'}}/>
-            <RaisedButton label="Search" secondary={true} style={{marginLeft:'10px'}}/>
+            <RaisedButton label="Search" secondary={true} style={{marginLeft:'10px'}} onClick={this.handleSubmit.bind(this)}/>
           </form>
           {showGitinfo}
         </div>

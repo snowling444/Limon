@@ -15,6 +15,7 @@ class Blog extends React.Component {
   componentWillMount(){
     axios.get('https://raw.githubusercontent.com/snowling444/Limon/master/data/blogcard.json?a='+Math.random())
      .then( res => this.setState({data:res.data,wait:false}))
+     .catch( err => alert(err) )
   }
   render () {
     return(

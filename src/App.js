@@ -23,7 +23,8 @@ class App extends React.Component {
     this.setState({
       title:this.props.router.isActive('/',true) ? 'Home' :
             this.props.router.isActive('/Blog') ? 'Blog' :
-            this.props.router.isActive('/Work') ? 'Work' : 'About'
+            this.props.router.isActive('/Work') ? 'Work' :
+            this.props.router.isActive('/About') ? 'About' : 'Blog'
     })
   }
   render () {
