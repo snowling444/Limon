@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-import hljs from 'highlight';
+import hljs from 'highlight.js';
 
 import Loading from '../component/Loading';
 var marked = require('marked');
